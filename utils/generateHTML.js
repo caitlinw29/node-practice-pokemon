@@ -9,6 +9,7 @@ function generateHTML(data) {
       <meta name="description" content="Pokemon page generated with node.js from command line">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="icon" type="image/jpg" href="./assets/img/poke-logo.jpg">
+      <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     </head>
     <body class="container text-center">
       <h1 class="display-1">${data.pokemon}</h1>
