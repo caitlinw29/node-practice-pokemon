@@ -1,0 +1,24 @@
+{
+  "name": "practice-pokemon",
+  "version": "1.0.0",
+  "description": "* This site is simply me practicing using node.js and the inquirer package, combined with fetch requests to public APIs. Feel free to use for your own practice/learning.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caitlinw29/node-practice-pokemon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caitlinw29/node-practice-pokemon/issues"
+  },
+  "homepage": "https://github.com/caitlinw29/node-practice-pokemon#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "inquirer": "^8.2.0"
+  }
+}
