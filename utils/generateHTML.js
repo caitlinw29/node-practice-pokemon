@@ -10,9 +10,9 @@ function generateHTML(data) {
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="icon" type="image/jpg" href="./assets/img/poke-logo.jpg">
     </head>
-    <body>
-      <h1>${data.pokemon}</h1>
-      <img src="" alt="">
+    <body class="container text-center">
+      <h1 class="display-1">${data.pokemon}</h1>
+      <img src="" class="img-fluid" alt="">
     </body>
   </html>
 `;
