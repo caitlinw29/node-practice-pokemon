@@ -4,7 +4,6 @@
 
 * User can choose a pokemon to dynamically generate a webpage for that pokemon.
 
-* See sample page at: [PokePractice](https://caitlinw29.github.io/node-practice-pokemon/)
 ## Installation
 ```
 npm install
@@ -17,5 +16,5 @@ node index.js
 * Then follow the prompts
 * Open your new index.html to see your pokePage!
 
-
+## Sample page: 
 ![PokePractice](./assets/img/pokePracticeSS.png)
