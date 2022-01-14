@@ -1,16 +1,10 @@
 //add libraries
-const inquirer = require('inquirer');
-const fs = require('fs');
-const html = require('./utils/generateHTML.js');
+// switch to imports for node-fetch
+import inquirer from "inquirer";
+import fs from 'fs';
+import generateHTML from './utils/generateHTML.js';
+import fetch from "node-fetch";
 
-//questions for inquirer
-const questions = [
-    {
-        type: 'input',
-        name: 'pokemon',
-        message: 'What Pokemon would you like to see?',
-    }
-];
 
 //Set up function to write answers in file
 function writeToFile(fileName, data) {
@@ -22,12 +16,31 @@ function writeToFile(fileName, data) {
 //inquire the questions, then put answers in a writeToFile function aimed at the index.html
 function init() {
     inquirer
-        .prompt(questions)
-        .then((data) => {
+      .prompt([     
+        {
+          type: 'input',
+          name: 'pokemon',
+          message: 'What Pokemon would you like to see?',
+        }
+      ])
+      .then((data) => {
             //pass the data into the html js file that was imported 
-            writeToFile("index.html", html({...data}));
-        });
+            writeToFile("index.html", generateHTML({...data})); 
+            //lowercase for url   
+            const pokeName = data.pokemon.toLowerCase(); 
+            const pokeAPI = "https://pokeapi.co/api/v2/pokemon/" + pokeName;
+            fetch(pokeAPI)
+              .then(function (response) {
+                if (response.status !== 200) {
+                    console.log("That pokemon is not valid");
+                }
+                return response.json();
+              })
+              .then(function (data) {
+                console.log(data);
+              })
+      })
 }
-
 // Function call to initialize app
 init();
+

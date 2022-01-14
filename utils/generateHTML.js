@@ -19,5 +19,5 @@ function generateHTML(data) {
 `;
 }
 
-//export the markdown so it can be pulled in index.js
-module.exports = generateHTML;
+//export the markdown so it can be pulled in index.js - default is for imports and exports to match
+export default generateHTML;
