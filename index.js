@@ -4,6 +4,7 @@ import inquirer from "inquirer";
 import fs from 'fs';
 import generateHTML from './utils/generateHTML.js';
 import fetch from "node-fetch";
+import download from 'image-downloader';
 
 
 //Set up function to write answers in file
@@ -37,7 +38,19 @@ function init() {
                 return response.json();
               })
               .then(function (data) {
-                console.log(data);
+                let pokeImage = data.sprites.front_default;
+                
+                const options = {
+                  url: pokeImage,
+                  dest: './assets/img/pokeImage.png'     // will be saved as pokeImage.png
+                }
+
+                download.image(options)
+                  .then(({ filename }) => {
+                    console.log('Saved to', filename)  // saved to /path/to/dest/photo
+                  })
+                  .catch((err) => console.error(err))
+
               })
       })
 }

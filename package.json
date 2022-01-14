@@ -19,6 +19,7 @@
   "homepage": "https://github.com/caitlinw29/node-practice-pokemon#readme",
   "dependencies": {
     "bootstrap": "^5.1.3",
+    "image-downloader": "^4.0.3",
     "inquirer": "^8.2.0",
     "node-fetch": "^3.1.0"
   },

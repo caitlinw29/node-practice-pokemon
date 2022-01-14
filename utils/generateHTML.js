@@ -13,7 +13,7 @@ function generateHTML(data) {
     </head>
     <body class="container text-center">
       <h1 class="display-1">${data.pokemon}</h1>
-      <img src="" class="img-fluid" alt="">
+      <img src="./assets/img/pokeImage.png" class="img-fluid" alt="Your pokemon" id="pokeImage">
     </body>
   </html>
 `;
